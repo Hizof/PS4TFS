@@ -13,6 +13,6 @@ $tfServer = New-Object Microsoft.TeamFoundation.Client.TeamFoundationServer($tfs
 $vcServer = $tfServer.GetService([Microsoft.TeamFoundation.VersionControl.Client.VersionControlServer]); 
 
 $fromPath = '$/test/Test folder'
-$toPath = '$/test/Test folder-realise-' + $currentWeekNumber
+$toPath = '$/test/Test folder-realise'
 
 $changesetId = $vcServer.CreateBranch($fromPath, $toPath, [Microsoft.TeamFoundation.VersionControl.Client.VersionSpec]::Latest, $null, "branch bot", $null, $null, $null)
